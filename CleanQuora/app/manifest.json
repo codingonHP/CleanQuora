@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Quora Cleaner",
+  "description": "Cleans the Quora blog",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "http://*.quora.com/",
+    "https://*.quora.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "https://www.quora.com/*", "http://*.quora.com/*", "https://*.quora.com/*" ],
+      "js": [ "quora.js" ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "img/icon.png"
+  }
+}
